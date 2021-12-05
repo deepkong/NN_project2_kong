@@ -5,9 +5,9 @@
 
 This repository is based on third party implementation code of "Music Transformer"
 
-https://github.com/gwinndr/MusicTransformer-Pytorch
+Link: https://github.com/gwinndr/MusicTransformer-Pytorch
 
-https://arxiv.org/pdf/1809.04281.pdf
+Paper: https://arxiv.org/pdf/1809.04281.pdf
 
 
 ## Installation
