@@ -16,21 +16,19 @@ For install and data preparation, please refer to the guidelines as follows
 
 This repository supports Pytorch >= 1.2.0 with Python >= 3.6
 
-Donwload [dataset] https://drive.google.com/file/d/1TTFloQwNdg95h-IJceUtVs1WQl_Bu1Ev/view?usp=sharing \
+Donwload [dataset] https://drive.google.com/file/d/1Mq3C4flVX1OJElPSVIB8Cqmh2xPdZ1xk/view?usp=sharing \
 Need to prepare the data root as below
 ```
 NN_project1_kong
-├── mmseg
-├── tools
-├── local_configs
-├── data
-│   ├── semantic_drone_dataset
-│   │   ├── images
-│   │   ├── labels
-│   │   ├── split
-│   │   │   ├── train.txt
-│   │   │   ├── val.txt
-│   │   │   ├── test.txt
+├── model
+├── third_party
+├── utilities
+├── dataset
+│   ├── e_piano.py
+│   ├── e_piano
+│   ├── midi_data
+│   ├── preprocessed
+│   │   
 ```
 
 
@@ -46,7 +44,25 @@ python tools/train.py local_configs/segformer_drone/segformer.b2.512x512.drone.2
 
 
 ## Evaluation
-Donwload [weights] https://drive.google.com/file/d/15X00UIMRd3cmFC7sgKiHu5DCRQhM5zik/view?usp=sharing
+Donwload [weights_Baseline] https://drive.google.com/file/d/1D2ih4l-yFhvBVqcu0F6TWuMng0x-4pqb/view?usp=sharing \
+Donwload [weights_MTGAN] https://drive.google.com/file/d/1J_CSJY2gsi2gHmt2iVKoLUmSXtUHk7S2/view?usp=sharing \
+Need to prepare the data root as below
+```
+NN_project1_kong
+├── model
+├── third_party
+├── utilities
+├── dataset
+├── mt_gan
+│   ├── results
+│   ├── tensorboard
+│   │   
+├── baseline
+│   ├── results
+│   ├── tensorboard
+│   │   
+```
+
 ```
 # Single-gpu testing
 python tools/test.py local_configs/segformer_drone/segformer.b2.512x512.drone.20k.py /path/to/checkpoint_file --show-dir /path/to/save_file
