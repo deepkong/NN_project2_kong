@@ -19,7 +19,7 @@ This repository supports Pytorch >= 1.2.0 with Python >= 3.6
 Donwload [dataset] https://drive.google.com/file/d/1Mq3C4flVX1OJElPSVIB8Cqmh2xPdZ1xk/view?usp=sharing \
 Need to prepare the data root as below
 ```
-NN_project1_kong
+NN_project2_kong
 ├── model
 ├── third_party
 ├── utilities
@@ -33,13 +33,8 @@ NN_project1_kong
 
 
 ## Training
-Donwload [pretrained weights] https://drive.google.com/file/d/1VuhtdeQSGl2gxndg_-98HPFJ1qEl3KiH/view?usp=sharing
 ```
-# Single-gpu training
-python tools/train.py local_configs/segformer_drone/segformer.b2.512x512.drone.20k.py
-
-# Multi-gpu training
-./tools/dist_train.sh local_configs/segformer_drone/segformer.b2.512x512.drone.20k.py <GPU_NUM>
+python train.py -output_dir <folder_name> --rpr
 ```
 
 
@@ -64,9 +59,10 @@ NN_project1_kong
 ```
 
 ```
-# Single-gpu testing
-python tools/test.py local_configs/segformer_drone/segformer.b2.512x512.drone.20k.py /path/to/checkpoint_file --show-dir /path/to/save_file
+python evaluate.py -model_weights <pretrained_weight_path> --rpr
+```
 
-# Multi-gpu testing
-./tools/dist_test.sh local_configs/segformer_drone/segformer.b2.512x512.drone.20k.py /path/to/checkpoint_file <GPU_NUM> --show-dir /path/to/save_file
+## Generation
+```
+python generate.py -output_dir <folder_name> -model_weights <pretrained_weight_path> --rpr
 ```
