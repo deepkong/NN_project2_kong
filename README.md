@@ -41,6 +41,7 @@ python train.py -output_dir <folder_name> --rpr
 ## Evaluation
 Donwload [weights_Baseline] https://drive.google.com/file/d/1D2ih4l-yFhvBVqcu0F6TWuMng0x-4pqb/view?usp=sharing \
 Donwload [weights_MTGAN] https://drive.google.com/file/d/1J_CSJY2gsi2gHmt2iVKoLUmSXtUHk7S2/view?usp=sharing \
+Download [result_sample] https://drive.google.com/file/d/1dP-z-J9B6bj_qUJvGBle09kyrB2Icv3S/view?usp=sharing \
 Need to prepare the data root as below
 ```
 NN_project1_kong
